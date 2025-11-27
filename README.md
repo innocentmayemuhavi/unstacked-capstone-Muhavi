@@ -38,12 +38,25 @@ Required environment variables:
 npm run dev
 ```
 
+The server will start on `http://localhost:3000`
+
 ### 4. Build for Production
 
 ```bash
 npm run build
 npm start
 ```
+
+## Live Demo
+
+View the live application at: https://mervelhomes.web.app/properties/GRwxZeq5vLKoHqzTFeTB
+
+You can try out the property insights feature with different properties on the live site.
+
+## Project Documentation
+
+- **PowerPoint Slides**: [View Presentation](https://docs.google.com/presentation/d/1GP9ucwYidOXeqp-QGpUpiz3SuLbjt_hGQDOujhgV6_I/edit?usp=sharing)
+- **Project Proposal**: [View Document](https://docs.google.com/document/d/1SQwAJDS0LHYA9G3QCMaYsA5GEQ4X11um7UEZI9aBUvE/edit?usp=sharing)
 
 ## API Endpoints
 
@@ -54,9 +67,11 @@ Generate property insights using AI.
 **Headers:**
 
 ```
-Authorization: Bearer YOUR_TOKEN
+Authorization: Bearer YOUR_AUTH_TOKEN
 Content-Type: application/json
 ```
+
+> **Note**: Replace `YOUR_AUTH_TOKEN` with a valid authentication token. The Bearer token is required for API authentication.
 
 **Request Body:**
 
@@ -138,6 +153,29 @@ import { propertyInsightsFlow } from "./services/propertyInsights";
 const insights = await propertyInsightsFlow({
   property: propertyData,
 });
+```
+
+Replace `YOUR_AUTH_TOKEN` with your actual authentication token:
+
+```bash
+curl -X POST http://localhost:3000/api/getInsight \
+  -H "Authorization: Bearer YOUR_AUTH_TOKEN
+curl -X POST http://localhost:3000/api/getInsight \
+  -H "Authorization: Bearer test_token" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "property": {
+      "name": "Luxury 3BR Apartment in Kilimani",
+      "address": "Kilimani, Nairobi",
+      "price": 15000000,
+      "area": 1500,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "category": "apartment",
+      "ammenities": ["Swimming Pool", "Gym", "Parking"],
+      "nearby_places": ["Yaya Centre", "Junction Mall"]
+    }
+  }'
 ```
 
 ## License
