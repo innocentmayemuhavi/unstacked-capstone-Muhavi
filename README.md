@@ -18,13 +18,7 @@ Express.js API for generating AI-powered property insights using Google Genkit A
 npm install
 ```
 
-### 2. Environment Configuration
 
-Copy `.env.example` to `.env` and fill in your credentials:
-
-```bash
-cp .env.example .env
-```
 
 Required environment variables:
 
