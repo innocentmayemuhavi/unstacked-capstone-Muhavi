@@ -18,8 +18,6 @@ Express.js API for generating AI-powered property insights using Google Genkit A
 npm install
 ```
 
-
-
 Required environment variables:
 
 - `PORT` - Server port (default: 3000)
@@ -49,6 +47,7 @@ You can try out the property insights feature with different properties on the l
 
 ## Project Documentation
 
+- **Video Demo**: [Watch Demo](https://www.loom.com/share/97d16ceb45b549e8b3125bd5a6ed288e)
 - **PowerPoint Slides**: [View Presentation](https://docs.google.com/presentation/d/1GP9ucwYidOXeqp-QGpUpiz3SuLbjt_hGQDOujhgV6_I/edit?usp=sharing)
 - **Project Proposal**: [View Document](https://docs.google.com/document/d/1SQwAJDS0LHYA9G3QCMaYsA5GEQ4X11um7UEZI9aBUvE/edit?usp=sharing)
 
