@@ -60,11 +60,11 @@ Generate property insights using AI.
 **Headers:**
 
 ```
-Authorization: Bearer YOUR_AUTH_TOKEN
+Authorization: Bearer testingapplicationtglobaltoken
 Content-Type: application/json
 ```
 
-> **Note**: Replace `YOUR_AUTH_TOKEN` with a valid authentication token. The Bearer token is required for API authentication.
+> **Note**: For testing purposes, use `testingapplicationtglobaltoken` as the Bearer token.
 
 **Request Body:**
 
@@ -148,13 +148,11 @@ const insights = await propertyInsightsFlow({
 });
 ```
 
-Replace `YOUR_AUTH_TOKEN` with your actual authentication token:
+## Testing with cURL
 
 ```bash
 curl -X POST http://localhost:3000/api/getInsight \
-  -H "Authorization: Bearer YOUR_AUTH_TOKEN
-curl -X POST http://localhost:3000/api/getInsight \
-  -H "Authorization: Bearer test_token" \
+  -H "Authorization: Bearer testingapplicationtglobaltoken" \
   -H "Content-Type: application/json" \
   -d '{
     "property": {
